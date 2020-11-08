@@ -1,0 +1,32 @@
+ALGORITHM detecter
+VAR
+    str:STRING;
+    i:integer:=0
+    nbr de mots:integer:=1
+   nbr_voyelles:integer:=0
+
+
+BEGIN
+    read (str);
+    FOR i FROM 0 TO (str.length-1) STEP step  DO
+    IF (str[i]=" ") THEN
+    nbr de mots:=nbr de mots+1
+    END_IF
+  END_FOR
+  SWITCH (str[i]) DO
+         case "a" : nbr_voyelles := nbr_voyelles + 1
+            case "A" : nbr_voyelles := nbr_voyelles + 1
+            case "e" : nbr_voyelles := nbr_voyelles + 1
+            case "E" : nbr_voyelles := nbr_voyelles + 1
+               case "I" : nbr_voyelles := nbr_voyelles + 1
+            case "i" : nbr_voyelles := nbr_voyelles + 1
+            case "o" : nbr_voyelles := nbr_voyelles + 1
+            case "O" : nbr_voyelles := nbr_voyelles + 1
+               case "u" : nbr_voyelles := nbr_voyelles + 1
+            case "U" : nbr_voyelles := nbr_voyelles + 1
+            case "y" : nbr_voyelles := nbr_voyelles + 1
+            case "Y" : nbr_voyelles := nbr_voyelles + 1
+       
+  END_SWITCH
+  write(str.length ,nbr_voyelles,nbr de mots)
+END
